@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose",
-    "package": "electron-packager ./ DemoApps --overwrite --app-version=1.0.0 --platform=win32 --arch=all --out=../DemoApps"
+    "package": "electron-packager ./ DemoApps --overwrite --app-version=1.0.0 --out=../DemoApps --icon=logo.icns"
   },
   "author": "",
   "license": "ISC",

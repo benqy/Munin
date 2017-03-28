@@ -214,15 +214,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-icudtl.dat
 node_modules/
-pnacl/
-nacl_irt_x86_64.nexe
-natives_blob.bin
-nw_100_percent.pak
-nw_200_percent.pak
-resources.pak
-snapshot_blob.bin
-src/favicon.ico
-locales/
 public/

@@ -225,3 +225,4 @@ resources.pak
 snapshot_blob.bin
 src/favicon.ico
 locales/
+public/

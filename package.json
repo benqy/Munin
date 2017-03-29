@@ -23,6 +23,7 @@
     "electron-builder": "^16.4.2",
     "electron-packager": "^8.6.0",
     "electron-reload": "^1.1.0",
+    "react-codemirror": "^0.3.0",
     "webpack": "^2.3.2"
   },
   "dependencies": {

@@ -1,27 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DatePicker, message } from 'antd';
+import { Layout,Menu, Icon } from 'antd';
+import CodeMirror from 'react-codemirror';
+
 import './app.less';
+import './editor/editor.less'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: '',
-    };
-  }
-  handleChange(date) {
-    message.info('您选择的日期是: ' + date.toString());
-    this.setState({ date });
-  }
-  render() {
-    return (
-      <div style={{ width: 400, margin: '100px auto' }}>
-        <DatePicker onChange={value => this.handleChange(value)} />
-        <div style={{ marginTop: 20 }}>当前日4期：{this.state.date.toString()}</div>
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));
+const { Header, Content,Footer } = Layout;
+var options = {
+  mode:'javascript',
+  theme:'mdn-like'
+};
+ReactDOM.render(
+  <Layout>
+    <Header className="header">
+      <div className="logo" ><img src="./app/logo.png"/></div>
+      <Menu
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={['2']}
+        style={{ lineHeight: '48px' }}
+      >
+        <Menu.Item key="1">nav 1</Menu.Item>
+        <Menu.Item key="2">nav 2</Menu.Item>
+        <Menu.Item key="3">nav 3</Menu.Item>
+      </Menu>
+    </Header>
+    <Content>
+      <CodeMirror options={options} />
+    </Content>
+    <Footer style={{ textAlign: 'center' }}>
+      
+    </Footer>
+  </Layout>
+, document.getElementById('app'));
